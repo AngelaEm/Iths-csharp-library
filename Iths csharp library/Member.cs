@@ -35,13 +35,13 @@ namespace Iths_csharp_library
         public void CheckoutBook(Book book)
         {
             _checkedOutBooks.Add(book);
-            book.AvailbleCopies--;
+            book.AvailebleCopies--;
         }
 
         public void ReturnBook(Book book)
         {
             _checkedOutBooks.Remove(book);
-            book.AvailbleCopies++;
+            book.AvailebleCopies++;
 
         }
 

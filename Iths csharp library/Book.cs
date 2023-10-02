@@ -11,7 +11,7 @@ namespace Iths_csharp_library
         //Fields 
         private string _isbn;
         private int _totalCopies;
-        private int _availebleCopies = 5;
+        private int _availebleCopies;
 
         public Book(string title, string author, string isbn, int totalCpoies)
         {

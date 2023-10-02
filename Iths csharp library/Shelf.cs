@@ -11,6 +11,9 @@ namespace Iths_csharp_library
         public string ID { get; set; }
         public string Category { get; set; }
         public List<Book> ListofBooks { get; set; }
+
+        public int _maxNumberOfBooksInShelf = 100;
+
         public Shelf(string id, string category)
         {
             ID = id;
@@ -21,7 +24,11 @@ namespace Iths_csharp_library
 
         public bool IsFull()
         {
-            return true;
+            if (ListofBooks.Count >= _maxNumberOfBooksInShelf)
+            {
+                return true;
+            }
+           return false;
 
         }
 

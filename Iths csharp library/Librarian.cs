@@ -27,7 +27,8 @@ namespace Iths_csharp_library
 
         public void AddBook(Book book)
         {
-            
+
+
 
         }
 
@@ -37,18 +38,22 @@ namespace Iths_csharp_library
 
         }
 
-        public Book SearchBook(Shelf shelf, string request)
+        public Book? SearchBook(Library library, string request, bool isCategory)
         {
-            foreach (Book book in shelf.ListofBooks)
+            foreach (Shelf shelf in library.ListWithShelves)
             {
-                if (book.Isbn == request || book.Title == request || book.Author == request)
+                foreach (Book book in shelf.ListofBooks )
                 {
-                    return book;
-                }
+                    if (book.Isbn == request || book.Title == request || book.Author == request)
+                    {
+                        return book;
+                    }
+                }         
             }
             return null;
-
         }
+
+        
 
         public void AddBookToShelf(Book book, Shelf shelf)
         {

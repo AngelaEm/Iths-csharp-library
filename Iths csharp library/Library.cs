@@ -8,11 +8,12 @@ namespace Iths_csharp_library
 {
     internal class Library
     {
-        public List<Shelf> ListWithShelves = new List<Shelf>();
+        //public List<Shelf> ListWithShelves = new List<Shelf>();
         public List<Member> ListWithMembers = new List<Member>();
         public List<Librarian> ListWithLibrarians = new List<Librarian>();
         public static List<Transaction> ListWithTransactions = new List<Transaction>();
 
+        public List<Shelf> ListWithShelves { get; set; } = new List<Shelf>();
 
 
 
@@ -45,6 +46,8 @@ namespace Iths_csharp_library
         {
 
         }
+
+        public 
 
     }
 }
